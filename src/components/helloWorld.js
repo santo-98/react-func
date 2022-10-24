@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 function HelloWorld(props){
+  const names = props.names
+  const [name ,setName] = useState(names[0])
+  
+  let shuffleNames = () => {
+    setName(names[ Math.floor(Math.random() * names.length)])
+  }
   return(
     <div>
-      Hello {props.name}!!
+      <h1 onClick={shuffleNames}> Hello {name}!!</h1>
     </div>
   )
 }

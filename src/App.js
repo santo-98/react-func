@@ -3,7 +3,7 @@ import HelloWorld from './components/helloWorld';
 
 function App() {
   return (
-    <HelloWorld name="boy!!"/>
+    <HelloWorld names={["boy!!", "kratos", "demos", "zesus"]}/>
   );
 }
 
